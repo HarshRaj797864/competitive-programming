@@ -1,0 +1,5 @@
+#!/bin/bash
+for file in $(git diff --cached --name-only | grep -E '\.(py|cpp)$'); do
+    python scripts/auto_header.py "$file"
+    git add "$file"
+done

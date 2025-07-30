@@ -1,0 +1,13 @@
+{
+  "LeetCode Approach": {
+    "prefix": "lcapproach",
+    "body": [
+      "1. ${1:Key insight}",
+      "2. ${2:Algorithm steps}",
+      "",
+      "Time Complexity: O(${3|n,n^2,nlogn,n!|})",
+      "Space Complexity: O(${4|1,n,n^2|})"
+    ],
+    "description": "Fill approach for LeetCode solution"
+  }
+}

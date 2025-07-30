@@ -1,0 +1,21 @@
+name: Update README
+on:
+  schedule:
+    - cron: '0 0 * * SUN'  # Every Sunday at midnight
+  workflow_dispatch:        # Manual trigger
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate stats
+        run: |
+          python3 scripts/stats_generator.py
+          python3 scripts/update_readme.py
+      - name: Commit changes
+        run: |
+          git config user.name "GitHub Actions"
+          git add README.md solutions.json
+          git commit -m "Auto-update README"
+          git push

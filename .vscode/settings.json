@@ -1,0 +1,56 @@
+
+{
+  "cph.templates.python": "${workspaceFolder}/.templates/python_header.py",
+  "cph.templates.cpp": "${workspaceFolder}/.templates/cpp_header.cpp",
+  "cph.templates.java": "${workspaceFolder}/.templates/java_header.java",
+  
+  "cph.defaultLanguage": "cpp",  // Your preferred language
+  
+  // Optional: Auto-open created files
+  "cph.openCreatedFile": true,
+  
+  // Enable for contest mode
+  "cph.contestProblems": true,
+  "cph.enableTemplate": true,
+  "files.associations": {
+    "*.py": "python",
+    "*.cpp": "cpp"
+  },
+  "cph.enableCreateProblem": true,
+  "competitive-companion.serverPort": 12345,
+  "competitive-companion.defaultLanguage": "cpp",
+  "competitive-companion.folder": "${workspaceFolder}/platforms/{platform}/{contestName}",
+  "competitive-companion.template": {
+    "cpp": "${workspaceFolder}/.templates/cpp_header.cpp",
+    "python": "${workspaceFolder}/.templates/python_header.py"
+  },
+  "cph.general.defaultLanguage": "cpp",
+  "cph.general.defaultLanguageTemplateFileLocation": "/home/rajharsh/competitive-programming/.templates/cpp_header.cpp",
+  "competitive-companion.autoStart": true,
+
+  
+  "leetcode.enableStatusBar": true,
+  "leetcode.endpoint": "leetcode",
+  "leetcode.defaultLanguage": "cpp",
+  "leetcode.workspaceFolder": "${workspaceFolder}/competitive-programming/platforms/leetcode",
+  "leetcode.filePath": {
+    "default": {
+      "folder": "${category}/${difficulty}",
+      "filename": "${id}_${kebab-case-name}.${ext}"
+    }
+  },
+  "leetcode.template": {
+    "cpp": "${workspaceFolder}/.templates/leetcode_template.cpp"
+  },
+  "leetcode.hint.configWebviewMarkdown": true,
+  "leetcode.hint.commentDescription": false,
+  "leetcode.showCommentDescription": false,
+  "template-variable.config": {
+    "currentDate": {
+      "type": "datetime",
+      "format": "YYYY-MM-DD"
+    }
+  }
+
+
+}
