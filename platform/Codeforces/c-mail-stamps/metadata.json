@@ -1,0 +1,18 @@
+{
+  "name": "C Mail Stamps",
+  "platform": "Codeforces",
+  "id": "C",
+  "url": "https://codeforces.com/problem/C",
+  "difficulty": "",
+  "tags": [],
+  "status": "not_started",
+  "created": "1753905914.4253144",
+  "time_limit": 2000,
+  "memory_limit": 256,
+  "input_format": "stdin",
+  "output_format": "stdout",
+  "batch_size": 1,
+  "interactive": false,
+  "group": "Codeforces - Codeforces Beta Round 29 (Div. 2, Codeforces format)",
+  "contest_id": ""
+}

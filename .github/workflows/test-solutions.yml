@@ -1,0 +1,46 @@
+name: Test Solutions
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: Set up C++
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y g++ build-essential
+    
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '11'
+    
+    - name: Make scripts executable
+      run: |
+        chmod +x scripts/*.py
+        chmod +x scripts/cp
+    
+    - name: Run tests
+      run: |
+        python3 scripts/batch_operations.py test --no-parallel
+    
+    - name: Upload test results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: test-results
+        path: batch_test_results.json

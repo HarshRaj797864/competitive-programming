@@ -9,13 +9,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Generate stats
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      
+      - name: Generate stats and update README
         run: |
           python3 scripts/stats_generator.py
           python3 scripts/update_readme.py
+      
       - name: Commit changes
         run: |
-          git config user.name "GitHub Actions"
-          git add README.md solutions.json
-          git commit -m "Auto-update README"
-          git push
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "🤖 Auto-update README with latest stats [$(date '+%Y-%m-%d')]"
+            git push
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

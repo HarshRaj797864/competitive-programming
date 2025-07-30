@@ -1,0 +1,22 @@
+"""
+Problem: {problem_name}
+Platform: {platform}
+Problem ID: {problem_id}
+URL: {url}
+
+Time Complexity: O()
+Space Complexity: O()
+"""
+
+class Solution:
+    def solve(self):
+        # Implementation here
+        pass
+
+def main():
+    solution = Solution()
+    # Test cases
+    pass
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,154 @@
+#!/bin/bash
+
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT_DIR="$(dirname "$SCRIPT_DIR")"
+
+# Helper function to show usage
+show_help() {
+    echo "🏆 Competitive Programming Automation"
+    echo "====================================="
+    echo ""
+    echo "Usage: cp <command> [options]"
+    echo ""
+    echo "Commands:"
+    echo "  setup <platform> <contest> <problem> [name] [url]  - Setup new problem"
+    echo "  test [path]                                        - Test solution(s)"
+    echo "  header [path]                                      - Add headers to files"
+    echo "  quick                                              - Interactive setup"
+    echo "  find <platform> <contest> <problem>               - Find problem directory"
+    echo "  list [platform]                                    - List problems"
+    echo ""
+    echo "Examples:"
+    echo "  cp setup cf 1500 A \"Maximum Increase\""
+    echo "  cp test platforms/Codeforces/1500/A"
+    echo "  cp test  # Test current directory"
+    echo "  cp quick # Interactive mode"
+    echo "  cp find cf 1500 A"
+    echo ""
+    echo "Shortcuts:"
+    echo "  cf = Codeforces, ac = AtCoder, lc = LeetCode, cc = CodeChef"
+}
+
+# Function to find problem directory
+find_problem() {
+    local platform="$1"
+    local contest="$2" 
+    local problem="$3"
+    
+    # Convert platform shortcut
+    case "${platform,,}" in
+        cf) platform="Codeforces" ;;
+        ac) platform="AtCoder" ;;
+        lc) platform="LeetCode" ;;
+        cc) platform="CodeChef" ;;
+        *) platform="$(echo "$platform" | sed 's/\b\w/\U&/g')" ;;
+    esac
+    
+    local problem_dir="$ROOT_DIR/platforms/$platform/$contest/$problem"
+    
+    if [ -d "$problem_dir" ]; then
+        echo "$problem_dir"
+        return 0
+    else
+        return 1
+    fi
+}
+
+# Main command dispatcher
+case "${1,,}" in
+    "setup")
+        if [ $# -lt 4 ]; then
+            echo "❌ Error: Not enough arguments for setup"
+            echo "Usage: cp setup <platform> <contest> <problem> [name] [url]"
+            exit 1
+        fi
+        
+        cmd="python3 \"$SCRIPT_DIR/setup_problem.py\" \"$2\" \"$3\" \"$4\""
+        
+        if [ -n "$5" ]; then
+            cmd="$cmd --name \"$5\""
+        fi
+        
+        if [ -n "$6" ]; then
+            cmd="$cmd --url \"$6\""
+        fi
+        
+        echo "🚀 Setting up problem: $2/$3/$4"
+        eval $cmd
+        ;;
+        
+    "test")
+        if [ -n "$2" ]; then
+            # Test specific path
+            python3 "$SCRIPT_DIR/test_solution.py" "$2"
+        else
+            # Test current directory
+            if ls *.cpp *.py *.java Solution.java 2>/dev/null | grep -q .; then
+                python3 "$SCRIPT_DIR/test_solution.py" "$(pwd)"
+            else
+                echo "❌ No solution files found in current directory"
+                echo "Available files:" 
+                ls -la
+            fi
+        fi
+        ;;
+        
+    "header")
+        if [ -n "$2" ]; then
+            python3 "$SCRIPT_DIR/auto_header.py" "$2"
+        else
+            python3 "$SCRIPT_DIR/auto_header.py" "$(pwd)"
+        fi
+        ;;
+        
+    "quick")
+        python3 "$SCRIPT_DIR/quick_commands.py" setup
+        ;;
+        
+    "find")
+        if [ $# -lt 4 ]; then
+            echo "❌ Error: Usage: cp find <platform> <contest> <problem>"
+            exit 1
+        fi
+        
+        if problem_dir=$(find_problem "$2" "$3" "$4"); then
+            echo "📂 Found: $problem_dir"
+            cd "$problem_dir" && pwd
+        else
+            echo "❌ Problem not found: $2/$3/$4"
+        fi
+        ;;
+        
+    "list")
+        if [ -n "$2" ]; then
+            # List problems for specific platform
+            platform_dir="$ROOT_DIR/platforms/$2"
+            if [ -d "$platform_dir" ]; then
+                echo "📋 Problems in $2:"
+                find "$platform_dir" -name "solution.*" -o -name "Solution.java" | \
+                    sed "s|$platform_dir/||" | \
+                    sed 's|/[^/]*$||' | \
+                    sort -u | \
+                    nl
+            else
+                echo "❌ Platform not found: $2"
+            fi
+        else
+            # List all platforms
+            echo "📋 Available platforms:"
+            ls -1 "$ROOT_DIR/platforms/" 2>/dev/null | nl
+        fi
+        ;;
+        
+    "help"|"--help"|"-h"|"")
+        show_help
+        ;;
+        
+    *)
+        echo "❌ Unknown command: $1"
+        echo ""
+        show_help
+        exit 1
+        ;;
+esac
