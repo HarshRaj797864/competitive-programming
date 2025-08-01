@@ -1,24 +1,109 @@
 {
   "metadata": {
-    "last_updated": "2025-07-31",
-    "total_problems": 0,
+    "last_updated": "2025-08-02T00:34:23.524740",
+    "total_problems": 1,
     "platforms": {
-      "LeetCode": 0,
-      "Codeforces": 0,
-      "AtCoder": 0,
-      "HackerRank": 0
+      "Codeforces": 1
     },
     "difficulty_distribution": {
       "Easy": 0,
       "Medium": 0,
-      "Hard": 0
+      "Hard": 0,
+      "Unknown": 1
     },
     "language_distribution": {
-      "Python": 0,
-      "C++": 0,
+      "Python": 1,
+      "C++": 1,
       "Java": 0,
       "JavaScript": 0
+    },
+    "status_distribution": {
+      "completed": 0,
+      "in_progress": 0,
+      "started": 0,
+      "not_started": 1
     }
   },
-  "problems": []
+  "statistics": {
+    "total_problems": 1,
+    "platforms": {
+      "Codeforces": 1
+    },
+    "difficulty_distribution": {
+      "Easy": 0,
+      "Medium": 0,
+      "Hard": 0,
+      "Unknown": 1
+    },
+    "language_distribution": {
+      "Python": 1,
+      "C++": 1,
+      "Java": 0,
+      "JavaScript": 0
+    },
+    "status_distribution": {
+      "completed": 0,
+      "in_progress": 0,
+      "started": 0,
+      "not_started": 1
+    },
+    "recent_activity": [
+      {
+        "name": "c-mail-stamps",
+        "platform": "Codeforces",
+        "last_modified": "2025-07-31T01:40:22.319738",
+        "status": "not_started"
+      }
+    ]
+  },
+  "problems": [
+    {
+      "name": "c-mail-stamps",
+      "platform": "Codeforces",
+      "directory": "platform/Codeforces/c-mail-stamps",
+      "files": [
+        {
+          "name": "test_cases.json",
+          "size": 223,
+          "last_modified": "2025-07-31T01:40:22.319738",
+          "type": "test_cases"
+        },
+        {
+          "name": "metadata.json",
+          "size": 455,
+          "last_modified": "2025-07-31T01:40:22.315383",
+          "type": "metadata"
+        },
+        {
+          "name": "solution.py",
+          "size": 333,
+          "last_modified": "2025-07-31T01:40:22.319738",
+          "type": "solution"
+        },
+        {
+          "name": "solution.cpp",
+          "size": 457,
+          "last_modified": "2025-07-31T01:40:22.315383",
+          "type": "solution"
+        },
+        {
+          "name": "README.md",
+          "size": 385,
+          "last_modified": "2025-07-31T01:40:22.315383",
+          "type": "documentation"
+        }
+      ],
+      "languages": [
+        "Python",
+        "C++"
+      ],
+      "difficulty": "",
+      "status": "not_started",
+      "url": "https://codeforces.com/problem/C",
+      "problem_id": "C",
+      "tags": [],
+      "date_created": "1753905914.4253144",
+      "last_modified": "2025-07-31T01:40:22.319738"
+    }
+  ]
 }
