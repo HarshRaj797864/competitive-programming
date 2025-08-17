@@ -1,0 +1,18 @@
+{
+  "name": "D Shichikuji And Power Grid",
+  "platform": "Codeforces",
+  "id": "D",
+  "url": "https://codeforces.com/problem/D",
+  "difficulty": "hard",
+  "tags": [],
+  "status": "completed",
+  "created": "1755451599.1026962",
+  "time_limit": 2000,
+  "memory_limit": 256,
+  "input_format": "stdin",
+  "output_format": "stdout",
+  "batch_size": 1,
+  "interactive": false,
+  "group": "Codeforces - Codeforces Round 597 (Div. 2)",
+  "contest_id": ""
+}
