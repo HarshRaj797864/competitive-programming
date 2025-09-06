@@ -1,0 +1,18 @@
+{
+  "name": "Abc Path",
+  "platform": "SPOJ",
+  "id": "unknown",
+  "url": "https://spoj.com/",
+  "difficulty": "",
+  "tags": [],
+  "status": "completed",
+  "created": "1756698044.168811",
+  "time_limit": 1000,
+  "memory_limit": 1536,
+  "input_format": "stdin",
+  "output_format": "stdout",
+  "batch_size": 1,
+  "interactive": false,
+  "group": "SPOJ - Classical",
+  "contest_id": ""
+}

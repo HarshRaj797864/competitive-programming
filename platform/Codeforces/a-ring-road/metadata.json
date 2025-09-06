@@ -1,18 +1,18 @@
 {
-  "name": "C Mail Stamps",
+  "name": "A Ring Road",
   "platform": "Codeforces",
-  "id": "C",
-  "url": "https://codeforces.com/problem/C",
+  "id": "A",
+  "url": "https://codeforces.com/problem/A",
   "difficulty": "",
   "tags": [],
   "status": "completed",
-  "created": "1753906222.3197381",
+  "created": "1757143281.69645",
   "time_limit": 2000,
   "memory_limit": 256,
   "input_format": "stdin",
   "output_format": "stdout",
   "batch_size": 1,
   "interactive": false,
-  "group": "Codeforces - Codeforces Beta Round 29 (Div. 2, Codeforces format)",
+  "group": "Codeforces - Codeforces Beta Round 24",
   "contest_id": ""
 }

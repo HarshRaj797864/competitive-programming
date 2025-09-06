@@ -1,101 +1,175 @@
 {
   "metadata": {
-    "last_updated": "2025-08-18T00:46:54.526213",
-    "total_problems": 2,
+    "last_updated": "2025-09-06T13:26:21.271173",
+    "total_problems": 6,
     "platforms": {
-      "Codeforces": 2
+      "SPOJ": 1,
+      "Codeforces": 5
     },
     "difficulty_distribution": {
       "Easy": 0,
       "Medium": 0,
       "Hard": 0,
-      "Unknown": 2
+      "Unknown": 6
     },
     "language_distribution": {
-      "Python": 2,
-      "C++": 2,
+      "Python": 6,
+      "C++": 6,
       "Java": 0,
       "JavaScript": 0
     },
     "status_distribution": {
-      "completed": 1,
+      "completed": 5,
       "in_progress": 0,
       "started": 0,
       "not_started": 1
     }
   },
   "statistics": {
-    "total_problems": 2,
+    "total_problems": 6,
     "platforms": {
-      "Codeforces": 2
+      "SPOJ": 1,
+      "Codeforces": 5
     },
     "difficulty_distribution": {
       "Easy": 0,
       "Medium": 0,
       "Hard": 0,
-      "Unknown": 2
+      "Unknown": 6
     },
     "language_distribution": {
-      "Python": 2,
-      "C++": 2,
+      "Python": 6,
+      "C++": 6,
       "Java": 0,
       "JavaScript": 0
     },
     "status_distribution": {
-      "completed": 1,
+      "completed": 5,
       "in_progress": 0,
       "started": 0,
       "not_started": 1
     },
     "recent_activity": [
       {
-        "name": "d-shichikuji-and-power-grid",
+        "name": "a-ring-road",
         "platform": "Codeforces",
-        "last_modified": "2025-08-18T00:39:18.456259",
+        "last_modified": "2025-09-06T12:52:37.608949",
         "status": "completed"
       },
       {
         "name": "c-mail-stamps",
         "platform": "Codeforces",
-        "last_modified": "2025-07-31T01:40:22.319738",
+        "last_modified": "2025-09-06T12:20:26.842537",
+        "status": "completed"
+      },
+      {
+        "name": "c-underground-lab",
+        "platform": "Codeforces",
+        "last_modified": "2025-09-06T10:54:51.998032",
         "status": "not_started"
+      },
+      {
+        "name": "d-ant-on-the-tree",
+        "platform": "Codeforces",
+        "last_modified": "2025-09-01T12:45:04.654980",
+        "status": "completed"
+      },
+      {
+        "name": "abc-path",
+        "platform": "SPOJ",
+        "last_modified": "2025-09-01T10:17:26.743677",
+        "status": "completed"
+      },
+      {
+        "name": "d-shichikuji-and-power-grid",
+        "platform": "Codeforces",
+        "last_modified": "2025-08-18T00:39:18.456259",
+        "status": "completed"
       }
     ]
   },
   "problems": [
     {
-      "name": "c-mail-stamps",
-      "platform": "Codeforces",
-      "directory": "platform/Codeforces/c-mail-stamps",
+      "name": "abc-path",
+      "platform": "SPOJ",
+      "directory": "platform/SPOJ/abc-path",
       "files": [
         {
           "name": "test_cases.json",
-          "size": 223,
-          "last_modified": "2025-07-31T01:40:22.319738",
+          "size": 136,
+          "last_modified": "2025-09-01T09:10:44.172809",
           "type": "test_cases"
         },
         {
           "name": "metadata.json",
-          "size": 455,
-          "last_modified": "2025-07-31T01:40:22.315383",
+          "size": 385,
+          "last_modified": "2025-09-01T10:16:46.799695",
           "type": "metadata"
         },
         {
           "name": "solution.py",
-          "size": 333,
-          "last_modified": "2025-07-31T01:40:22.319738",
+          "size": 313,
+          "last_modified": "2025-09-01T09:10:44.168811",
           "type": "solution"
         },
         {
           "name": "solution.cpp",
-          "size": 457,
-          "last_modified": "2025-07-31T01:40:22.315383",
+          "size": 1977,
+          "last_modified": "2025-09-01T10:17:26.743677",
           "type": "solution"
         },
         {
           "name": "README.md",
-          "size": 385,
-          "last_modified": "2025-07-31T01:40:22.315383",
+          "size": 365,
+          "last_modified": "2025-09-01T09:10:44.168811",
+          "type": "documentation"
+        }
+      ],
+      "languages": [
+        "C++",
+        "Python"
+      ],
+      "difficulty": "",
+      "status": "completed",
+      "url": "https://spoj.com/",
+      "problem_id": "unknown",
+      "tags": [],
+      "date_created": "1756698044.168811",
+      "last_modified": "2025-09-01T10:17:26.743677"
+    },
+    {
+      "name": "c-underground-lab",
+      "platform": "Codeforces",
+      "directory": "platform/Codeforces/c-underground-lab",
+      "files": [
+        {
+          "name": "test_cases.json",
+          "size": 237,
+          "last_modified": "2025-09-04T09:47:43.719996",
+          "type": "test_cases"
+        },
+        {
+          "name": "metadata.json",
+          "size": 468,
+          "last_modified": "2025-09-04T09:47:43.719996",
+          "type": "metadata"
+        },
+        {
+          "name": "solution.py",
+          "size": 337,
+          "last_modified": "2025-09-04T09:47:43.697996",
+          "type": "solution"
+        },
+        {
+          "name": "solution.cpp",
+          "size": 1767,
+          "last_modified": "2025-09-06T10:54:51.998032",
+          "type": "solution"
+        },
+        {
+          "name": "README.md",
+          "size": 389,
+          "last_modified": "2025-09-04T09:47:43.701663",
           "type": "documentation"
         }
       ],
@@ -108,8 +182,104 @@
       "url": "https://codeforces.com/problem/C",
       "problem_id": "C",
       "tags": [],
-      "date_created": "1753905914.4253144",
-      "last_modified": "2025-07-31T01:40:22.319738"
+      "date_created": "1756959463.7016628",
+      "last_modified": "2025-09-06T10:54:51.998032"
+    },
+    {
+      "name": "c-mail-stamps",
+      "platform": "Codeforces",
+      "directory": "platform/Codeforces/c-mail-stamps",
+      "files": [
+        {
+          "name": "test_cases.json",
+          "size": 223,
+          "last_modified": "2025-09-06T11:47:52.793875",
+          "type": "test_cases"
+        },
+        {
+          "name": "metadata.json",
+          "size": 454,
+          "last_modified": "2025-09-06T12:18:54.936535",
+          "type": "metadata"
+        },
+        {
+          "name": "solution.py",
+          "size": 333,
+          "last_modified": "2025-09-06T11:47:52.785990",
+          "type": "solution"
+        },
+        {
+          "name": "solution.cpp",
+          "size": 1255,
+          "last_modified": "2025-09-06T12:20:03.044129",
+          "type": "solution"
+        },
+        {
+          "name": "README.md",
+          "size": 1492,
+          "last_modified": "2025-09-06T12:20:26.842537",
+          "type": "documentation"
+        }
+      ],
+      "languages": [
+        "C++",
+        "Python"
+      ],
+      "difficulty": "",
+      "status": "completed",
+      "url": "https://codeforces.com/problem/C",
+      "problem_id": "C",
+      "tags": [],
+      "date_created": "1753906222.3197381",
+      "last_modified": "2025-09-06T12:20:26.842537"
+    },
+    {
+      "name": "d-ant-on-the-tree",
+      "platform": "Codeforces",
+      "directory": "platform/Codeforces/d-ant-on-the-tree",
+      "files": [
+        {
+          "name": "test_cases.json",
+          "size": 361,
+          "last_modified": "2025-09-01T10:18:11.271683",
+          "type": "test_cases"
+        },
+        {
+          "name": "metadata.json",
+          "size": 469,
+          "last_modified": "2025-09-01T10:19:08.051663",
+          "type": "metadata"
+        },
+        {
+          "name": "solution.py",
+          "size": 337,
+          "last_modified": "2025-09-01T10:18:11.255683",
+          "type": "solution"
+        },
+        {
+          "name": "solution.cpp",
+          "size": 292,
+          "last_modified": "2025-09-01T12:45:04.654980",
+          "type": "solution"
+        },
+        {
+          "name": "README.md",
+          "size": 389,
+          "last_modified": "2025-09-01T10:18:11.255683",
+          "type": "documentation"
+        }
+      ],
+      "languages": [
+        "C++",
+        "Python"
+      ],
+      "difficulty": "",
+      "status": "completed",
+      "url": "https://codeforces.com/contest/29/problem/D",
+      "problem_id": "D",
+      "tags": [],
+      "date_created": "1756702091.2556834",
+      "last_modified": "2025-09-01T12:45:04.654980"
     },
     {
       "name": "d-shichikuji-and-power-grid",
@@ -158,6 +328,54 @@
       "tags": [],
       "date_created": "1755451599.1026962",
       "last_modified": "2025-08-18T00:39:18.456259"
+    },
+    {
+      "name": "a-ring-road",
+      "platform": "Codeforces",
+      "directory": "platform/Codeforces/a-ring-road",
+      "files": [
+        {
+          "name": "test_cases.json",
+          "size": 449,
+          "last_modified": "2025-09-06T12:51:21.704504",
+          "type": "test_cases"
+        },
+        {
+          "name": "metadata.json",
+          "size": 422,
+          "last_modified": "2025-09-06T12:51:42.580995",
+          "type": "metadata"
+        },
+        {
+          "name": "solution.py",
+          "size": 331,
+          "last_modified": "2025-09-06T12:51:21.696450",
+          "type": "solution"
+        },
+        {
+          "name": "solution.cpp",
+          "size": 1471,
+          "last_modified": "2025-09-06T12:52:05.898739",
+          "type": "solution"
+        },
+        {
+          "name": "README.md",
+          "size": 1533,
+          "last_modified": "2025-09-06T12:52:37.608949",
+          "type": "documentation"
+        }
+      ],
+      "languages": [
+        "C++",
+        "Python"
+      ],
+      "difficulty": "",
+      "status": "completed",
+      "url": "https://codeforces.com/problem/A",
+      "problem_id": "A",
+      "tags": [],
+      "date_created": "1757143281.69645",
+      "last_modified": "2025-09-06T12:52:37.608949"
     }
   ]
 }
